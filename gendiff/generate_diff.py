@@ -29,7 +29,3 @@ def generate_diff(filepath1, filepath2):
     no_quotes_commas = string.replace('"', "").replace(",", "\n")
     diff_string = no_quotes_commas.replace("{", "{\n").replace("}", "\n}")
     return diff_string
-
-
-if __name__ == "__main__":
-    generate_diff()
