@@ -5,8 +5,8 @@ from gendiff.cli import display_help
 
 
 def main():
-    display_help()
-    diff = generate_diff("gendiff/file1.json", "gendiff/file2.json")
+    one_path, two_path = display_help()
+    diff = generate_diff(one_path, two_path)
     print(diff)
 
 

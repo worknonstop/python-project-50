@@ -13,7 +13,8 @@ def display_help():
     parser.add_argument(
         "-f", "--format", type=str, default="json", help="set format of output"
     )
-    parser.parse_args()
+    args = parser.parse_args()
+    return args.first_file, args.second_file
 
 
 if __name__ == "__main__":
