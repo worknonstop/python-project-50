@@ -27,5 +27,5 @@ def generate_diff(filepath1, filepath2):
     diff_dict = get_diff_dict(dict1, dict2)
     string = json.dumps(diff_dict)
     no_quotes_commas = string.replace('"', "").replace(",", "\n")
-    diff_string = no_quotes_commas.replace("{", "{\n").replace("}", "\n}")
+    diff_string = no_quotes_commas.replace("{", "{\n ").replace("}", "\n}")
     return diff_string
