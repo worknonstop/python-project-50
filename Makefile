@@ -29,3 +29,5 @@ package-install:
 
 package-reinstall:
 	python3 -m pip install --force-reinstall --user dist/*.whl
+
+.PHONY: install test lint selfcheck check build
