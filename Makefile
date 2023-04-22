@@ -11,10 +11,15 @@ test:
 	poetry run pytest
 
 test-coverage:
-	poetry run pytest --cov=gendiff tests/
+	poetry run pytest --cov=gendiff --cov-report xml tests/
 
 lint:
 	poetry run flake8 gendiff
+
+selfcheck:
+	poetry check
+
+check: selfcheck test lint
 
 publish:
 	poetry publish --dry-run
